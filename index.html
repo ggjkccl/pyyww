@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>telegram Redirect</title>
-<script>
-  // List of telegram links
-  const links = [
-    "https://ldd8808.com/nEvQ7r"
-  ];
+export default {
+  async fetch(request) {
+    return Response.redirect("https://ldd8808.com/nEvQ7r", 302);
+  }
+};
 
-  // Get current index from localStorage, default to 0
-  let index = parseInt(localStorage.getItem("waIndex") || "0");
 
-  // Redirect immediately
-  window.location.replace(links[index]);
 
-  // Update index for next visit
-  localStorage.setItem("waIndex", (index + 1) % links.length);
-</script>
-</head>
-<body>
-<p>Redirecting to telegram...</p>
-</body>
-</html>
